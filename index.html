@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Capi Scripts</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: #0d1117;
+      font-family: Arial, sans-serif;
+      color: #c9d1d9;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    aside {
+      width: 200px;
+      background: #161b22;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    aside a {
+      color: #c9d1d9;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    aside a:hover {
+      color: #58a6ff;
+    }
+
+    main {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      color: #58a6ff;
+    }
+
+    .search-bar {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .search-bar input {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      width: 250px;
+      background: #0d1117;
+      color: #fff;
+      border: 1px solid #30363d;
+    }
+
+    .search-bar button {
+      background: #238636;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      background: #21262d;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: #c9d1d9;
+      font-weight: bold;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .buttons a:hover {
+      background: #30363d;
+    }
+
+    .content-box {
+      background: #161b22;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 30px;
+      box-shadow: 0 0 20px #0d111740;
+    }
+
+    .content-box h2 {
+      color: #58a6ff;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      aside {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        justify-content: space-around;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <aside>
+    <a href="#">Scripts</a>
+    <a href="#">Executores</a>
+    <a href="#">Loadstring</a>
+    <a href="#">Influencers</a>
+    <a href="#">FlappyBird</a>
+    <a href="#">Tux Cards</a>
+  </aside>
+
+  <main>
+    <div class="header">
+      <h1>Capi Scripts</h1>
+      <div class="search-bar">
+        <input type="text" placeholder="Pesquisar pelo título...">
+        <button>🔍</button>
+      </div>
+      <div class="buttons">
+        <a href="#">🎥 YouTube</a>
+        <a href="#">💬 Discord</a>
+        <a href="#">🐱 GitHub</a>
+      </div>
+    </div>
+
+    <div class="content-box">
+      <h2>Sobre Min</h2>
+      <p>sobre Capi</p>
+    </div>
+  </main>
+
+</body>
+</html>
