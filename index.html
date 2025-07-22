@@ -2,41 +2,106 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Scripts</title>
+  <title>Capi Scripts</title>
   <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
     body {
-      background-color: #0d1117;
-      color: #c9d1d9;
+      background: #0d1117;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+      color: #c9d1d9;
+      display: flex;
+      min-height: 100vh;
     }
-
-    .container {
+    aside {
+      width: 200px;
+      background: #161b22;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    aside a {
+      color: #c9d1d9;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+    aside a:hover {
+      color: #58a6ff;
+    }
+    main {
+      flex: 1;
       padding: 30px;
     }
-
-    .back-btn {
-      margin-bottom: 30px;
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
     }
-
-    .back-btn a {
-      text-decoration: none;
-      background: linear-gradient(90deg, #00c6ff, #0072ff);
-      padding: 12px 20px;
-      border-radius: 10px;
+    .header h1 {
+      font-size: 36px;
+      color: #58a6ff;
+    }
+    .search-bar {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .search-bar input {
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      width: 250px;
+      background: #0d1117;
+      color: #fff;
+      border: 1px solid #30363d;
+    }
+    .search-bar button {
+      background: #238636;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
       color: white;
-      font-weight: bold;
-      box-shadow: 0 0 10px #0072ff88;
-      display: inline-block;
+      cursor: pointer;
     }
-
+    .buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+    .buttons a {
+      text-decoration: none;
+      background: #21262d;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: #c9d1d9;
+      font-weight: bold;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .buttons a:hover {
+      background: #30363d;
+    }
+    .content-box {
+      background: #161b22;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 30px;
+      box-shadow: 0 0 20px #0d111740;
+    }
+    .content-box h2 {
+      color: #58a6ff;
+      margin-bottom: 10px;
+    }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
+      gap: 20px;
     }
-
     .card {
       background-color: #161b22;
       border-radius: 15px;
@@ -44,80 +109,108 @@
       box-shadow: 0 0 20px #0d111755;
       transition: transform 0.3s ease;
     }
-
     .card:hover {
       transform: translateY(-5px);
     }
-
     .card h2 {
       color: #58a6ff;
       font-size: 20px;
       margin-bottom: 10px;
     }
-
     .card p {
       font-size: 15px;
       color: #c9d1d9;
     }
-
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      aside {
+        width: 100%;
+        flex-direction: row;
+        overflow-x: auto;
+        justify-content: space-around;
+      }
+    }
   </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="back-btn">
-    <a href="index.html">← Voltar para Home</a>
+<aside>
+  <a onclick="loadScripts()">Scripts</a>
+  <a href="#">Executores</a>
+  <a href="#">Loadstring</a>
+  <a href="#">Influencers</a>
+  <a href="#">FlappyBird</a>
+  <a href="#">Tux Cards</a>
+</aside>
+
+<main>
+  <div class="header">
+    <h1>Capi Scripts</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Pesquisar pelo título...">
+      <button>🔍</button>
+    </div>
+    <div class="buttons">
+      <a href="#">🎥 YouTube</a>
+      <a href="#">💬 Discord</a>
+      <a href="#">🐱 GitHub</a>
+    </div>
   </div>
 
-  <div class="grid">
-
-    <div class="card">
-      <h2>Tux Hub/Brainrot</h2>
-      <p>SCRIPT PRO ROUBE UM BRAINROT MT OP AUTO ROUBAR E INSTANT PROXIMITY PROMPT</p>
-    </div>
-
-    <div class="card">
-      <h2>Jrizz Menu Brainrot</h2>
-      <p>Script de steal a brainrot criado por Jrizz inspirado no meu :D</p>
-    </div>
-
-    <div class="card">
-      <h2>Tux Hub/Ignite</h2>
-      <p>Script Universal que te ajuda a criar scripts feito por oRee Scripter</p>
-    </div>
-
-    <div class="card">
-      <h2>Tux Hub/Speed Legends</h2>
-      <p>Script de speed legends criado por oRee Scripter tux hub!</p>
-    </div>
-
-    <div class="card">
-      <h2>Aimbot Universal (PC, Mobile)</h2>
-      <p>Script feito por Sw1ft Sync de aimbot, aimlock e aimassist para celular e pc</p>
-    </div>
-
-    <div class="card">
-      <h2>FadHen Brainrot</h2>
-      <p>Script de fadhen para o steal a brainrot com key mas a key foi tirada por Sw1ft Sync</p>
-    </div>
-
-    <div class="card">
-      <h2>Steal A Character</h2>
-      <p>script de roube um personagem feito por Tora IsMe sem key</p>
-    </div>
-
-    <div class="card">
-      <h2>Forsaken Funny Hub</h2>
-      <p>Script de forsaken criado por Funny Hub devs</p>
-    </div>
-
-    <div class="card">
-      <h2>Delfis Brainrot</h2>
-      <p>script de steal a brainrot</p>
-    </div>
-
+  <div id="mainContent" class="content-box">
+    <h2>Sobre Min</h2>
+    <p>sobre Capi</p>
   </div>
-</div>
+</main>
+
+<script>
+function loadScripts() {
+  const content = `
+    <h2>Scripts</h2>
+    <div class="grid">
+      <div class="card">
+        <h2>Tux Hub/Brainrot</h2>
+        <p>SCRIPT PRO ROUBE UM BRAINROT MT OP AUTO ROUBAR E INSTANT PROXIMITY PROMPT</p>
+      </div>
+      <div class="card">
+        <h2>Jrizz Menu Brainrot</h2>
+        <p>Script de steal a brainrot criado por Jrizz inspirado no meu :D</p>
+      </div>
+      <div class="card">
+        <h2>Tux Hub/Ignite</h2>
+        <p>Script Universal que te ajuda a criar scripts feito por oRee Scripter</p>
+      </div>
+      <div class="card">
+        <h2>Tux Hub/Speed Legends</h2>
+        <p>Script de speed legends criado por oRee Scripter tux hub!</p>
+      </div>
+      <div class="card">
+        <h2>Aimbot Universal (PC, Mobile)</h2>
+        <p>Script feito por Sw1ft Sync de aimbot, aimlock e aimassist para celular e pc</p>
+      </div>
+      <div class="card">
+        <h2>FadHen Brainrot</h2>
+        <p>Script de fadhen para o steal a brainrot com key mas a key foi tirada por Sw1ft Sync</p>
+      </div>
+      <div class="card">
+        <h2>Steal A Character</h2>
+        <p>script de roube um personagem feito por Tora IsMe sem key</p>
+      </div>
+      <div class="card">
+        <h2>Forsaken Funny Hub</h2>
+        <p>Script de forsaken criado por Funny Hub devs</p>
+      </div>
+      <div class="card">
+        <h2>Delfis Brainrot</h2>
+        <p>script de steal a brainrot</p>
+      </div>
+    </div>
+  `;
+  document.getElementById("mainContent").innerHTML = content;
+}
+</script>
 
 </body>
 </html>
